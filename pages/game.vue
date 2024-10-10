@@ -74,8 +74,8 @@
       </span>
     </el-dialog>
 
-    <el-dialog
-      title="Attention"
+    <el-dialog :show-close="false"
+      title="Party Code"
       :visible.sync="waitingPlayer"
       width="30%"
       center

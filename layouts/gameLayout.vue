@@ -36,7 +36,8 @@
   <style scopped>
  .background-body {
   margin: 0 auto;
-  background-image: url(/_nuxt/static/cards/background.PNG);
+  background-image: url('~/static/background_global.png');
+
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -49,7 +50,7 @@
 @media (max-width: 480px) {
   .background-body  {
     margin: 0 auto;
-  background-image: url(/_nuxt/static/background-mobile.PNG);
+    background-image: url("~/static/background_mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 

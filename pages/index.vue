@@ -167,7 +167,7 @@ form {
 }
 .background-main {
   margin: 0 auto;
-  background-image: url("~/static/cards/background.PNG"); /* Set the background image */
+  background-image: url("~/static/background_global.png"); /* Set the background image */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-size: cover; /* Cover the entire element */
   background-position: center;
@@ -182,7 +182,7 @@ form {
 @media (max-width: 480px) {
   .background-main {
     margin: 0 auto;
-    background-image: url("~/static/background-mobile.PNG");
+    background-image: url("~/static/background_mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
 

@@ -1,4 +1,8 @@
 export default {
+  server: {
+    port: 3000, // Change this to the desired port
+    host: '0.0.0.0' // Optional: Set the host to allow external connections
+  },
   // Global page headers
   head: {
     target: 'static',
