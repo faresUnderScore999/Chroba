@@ -1,44 +1,55 @@
 <template>
-  <div class="background-main">
+  <div v-loading="loading"
+    element-loading-text="Loading..."
+    element-loading-spinner="el-icon-loading"
+    element-loading-background="rgba(0, 0, 0, 0.8)" class="background-main">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <audio ref="backgroundMusic" loop>
+      <source src="/elghostman.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
     <img
       id="table_login"
-      style="
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-25%) scale(1.5);
-      "
       :src="require(`~/static/tarot-chkobba.png`)"
       alt="Card Image"
     />
     <form @submit.prevent="login">
-      <!-- <el-button @click="dialogFormVisibleJoin = true">Join</el-button>
-      <el-button @click="dialogFormVisible = true">Create Game</el-button> -->
       <img
-        style="transform: translateX(50%)"
+        class="btn_img"
+        :src="require(`~/static/cards/btn2.png`)"
+        alt="Card Image"
+        @click="dialogFormVisible = true"
+      />
+      <img
         class="btn_img"
         :src="require(`~/static/cards/btn1.png`)"
         alt="Card Image"
         @click="dialogFormVisibleJoin = true"
       />
       <img
-        style="transform: translateX(50%)"
         class="btn_img"
-        :src="require(`~/static/cards/btn2.png`)"
+        :src="require(`~/static/cards/btn3.png`)"
         alt="Card Image"
-        @click="dialogFormVisible = true"
+        @click="playVSai"
       />
+
+    
+   
       <!-- Dialog for Room ID -->
       <el-dialog width="95%" :visible.sync="dialogFormVisible">
         <div style="display: grid; justify-content: center">
           <input
             v-model="username"
             type="text"
-            placeholder="Username"
+            placeholder="اسمك هنا"
             required
           />
           <br />
-          <label>who many players:</label>
+          <label>عدد  اللاعبين:</label>
           <br />
           <el-input-number
             v-model="nbPlayer"
@@ -49,8 +60,8 @@
         </div>
 
         <span slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormVisible = false">Cancel</el-button>
-          <el-button type="primary" @click="submitRoomID">Login</el-button>
+        
+          <el-button type="primary" @click="submitRoomID">إنشاء لعبة</el-button>
         </span>
       </el-dialog>
 
@@ -59,7 +70,7 @@
           <input
             v-model="username"
             type="text"
-            placeholder="Username"
+            placeholder="اسمك هنا"
             required
           />
           <br />
@@ -74,20 +85,41 @@
         </div>
 
         <span slot="footer" class="dialog-footer">
-          <el-button @click="dialogFormVisibleJoin = false">Cancel</el-button>
-          <el-button type="primary" @click="submitRoomID">Login</el-button>
+        
+          <el-button type="primary" @click="submitRoomID">الانضمام إلى اللعبة</el-button>
         </span>
       </el-dialog>
     </form>
+    <footer style="color: aliceblue;">
+      <p>&copy; 2024 Monkey.zip. All rights reserved.</p>
+      <p>
+        Contact us:
+        <a style="color: aliceblue;" href="mailto:benalifares@gmail.com">benalifares999@gmail.com</a>
+        <a
+          style="margin: 10px"
+          href="https://www.facebook.com/fares.ben.735507/"
+          target="_blank"
+        >
+          <i class="fab fa-facebook"></i>
+          <!-- Font Awesome Facebook Icon -->
+        </a>
+        <a href="https://www.instagram.com/ben_ali_fares.zip/" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <!-- Font Awesome Instagram Icon -->
+        </a>
+      </p>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
+  layout: "gameLayout",
   middleware: false,
   auth: false,
   data() {
     return {
+      loading:false,
       dialogFormVisibleJoin: false,
       dialogFormVisible: false,
       username: "",
@@ -97,14 +129,20 @@ export default {
     };
   },
   async mounted() {
+    this.$refs.backgroundMusic.play();
     this.RoomID = this.$route.query.roomID;
- 
   },
   methods: {
+    playVSai(){
+      this.username="PLAYER"
+      this.nbPlayer=1
+this.login()
+    },
     async login() {
       try {
         // Call the login endpoint
         if (this.roomID == "") {
+          this.loading=true
           console.warn("creating room");
           const response = await this.$auth.loginWith("local", {
             data: {
@@ -125,6 +163,7 @@ export default {
 
         const res = await this.$axios.get("/protected");
         console.log(res);
+        this.loading=false
         // After login, redirect to a protected route or show success message
         this.$router.push("/game");
       } catch (err) {
@@ -147,6 +186,18 @@ export default {
 };
 </script>
 <style scoped>
+i{
+  color: aliceblue;
+}
+footer {
+  background: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 97%;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -156,11 +207,13 @@ form {
   top: 20%;
   right: 50%;
 }
-.btn_img:hover {
-  transform: scale(1.1);
-}
+
 .btn_img {
   padding: 20px;
+  transform: translateX(50%);
+}
+.btn_img:hover {
+  transform: translateX(50%) scale(1.1);
 }
 .v-modal {
   display: none;
@@ -175,6 +228,13 @@ form {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+#table_login {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 510px);
+
+  height: 80%;
 }
 
 /* Responsive design for smaller mobile screens */
@@ -193,6 +253,9 @@ form {
   }
   #table_login {
     display: none;
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 510px);
   }
 
   form {

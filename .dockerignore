@@ -1,2 +1,33 @@
+# Ignore node_modules
 node_modules
-*.nuxt
+npm-debug.log
+yarn-error.log
+
+# Ignore local development files
+.DS_Store
+*.log
+
+
+# Ignore build and output directories
+.nuxt
+dist
+coverage
+
+# Ignore test directories and files
+tests
+__tests__
+*.spec.js
+*.test.js
+
+# Ignore other unnecessary files
+*.tgz
+*.zip
+*.tar.gz
+
+# Ignore IDE configurations
+.vscode
+.idea
+
+# Ignore Dockerfile and docker-compose files (optional)
+Dockerfile
+docker-compose.yml

@@ -6,7 +6,7 @@ export default {
   // Global page headers
   head: {
     target: 'static',
-    title: "chkoba_front",
+    title: "♣︎ Chkobaa ♣︎",
     htmlAttrs: {
       lang: "en",
     },
@@ -31,11 +31,14 @@ export default {
   // Modules for dev and build (recommended)
   buildModules: [],
 
-  // Axios module configuration
+  // Axios module configuration localhost:8080 chkobaa3.onrender.com
   axios: {
-    baseURL:  `https://chkobaa3.onrender.com/`,
+    baseURL: `${process.env.NUXT_API_FURL}`,
   },
-  
+  publicRuntimeConfig: {
+    apiUrl: process.env.NUXT_API_URL  // Default value if not set
+  },
+
   // Auth module configuration
   auth: {
     strategies: {

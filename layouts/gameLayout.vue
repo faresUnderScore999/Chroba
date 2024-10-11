@@ -3,19 +3,17 @@
   width: 100%;
   height: 100%;">
    
-      <!-- Header -->
-      <!-- <header>
-        <nav>
-          <ul>
-            <li><NuxtLink to="/">Home</NuxtLink></li>
-            <li><NuxtLink to="/about">About</NuxtLink></li>
-            <li><NuxtLink to="/game">Play Game</NuxtLink></li>
-          </ul>
-        </nav>
-      </header> -->
+ 
+
   
       <!-- Main Content -->
       <main class="background-body" >
+        <div>
+
+
+
+
+  </div>
         <Nuxt />
       </main>
   
@@ -30,6 +28,24 @@
   <script>
   export default {
     css: [],
+    head() {
+    return {
+      title: 'Play Chkobaa Online – Free with Friends or AI',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Play Chkobaa online for free with friends or against AI. No signup required! Enjoy a classic card game with great features.' },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:title', content: '♣︎ Chkobaa ♣︎' },
+        { property: 'og:description', content: 'Play Chkobaa online for free with friends or against AI. No signup required!' },
+        { property: 'og:url', content: 'https://chkobaa.onrender.com' },
+        { property: 'og:image', content: 'https://www.my-voyance.fr/wp-content/uploads/2013/10/chkobba.gif' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' }
+      ]
+    }
+  },
+
+
   }
   </script>
   

@@ -37,4 +37,11 @@
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
      display: inline;
    }
+   @media (max-width: 480px) {
+    .card img {
+    width: 40px;
+    height: 60px;
+     object-fit: cover;
+     margin: 4px;
+   }}
    </style>

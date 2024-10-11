@@ -1,0 +1,32 @@
+[
+  {
+    "name": "animation",
+    "path": "/animation",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\animation.vue",
+    "chunkName": "pages/animation"
+  },
+  {
+    "name": "game",
+    "path": "/game",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\game.vue",
+    "chunkName": "pages/game"
+  },
+  {
+    "name": "protected",
+    "path": "/protected",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\protected.vue",
+    "chunkName": "pages/protected"
+  },
+  {
+    "name": "test",
+    "path": "/test",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\test.vue",
+    "chunkName": "pages/test"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
