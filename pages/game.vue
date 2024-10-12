@@ -13,14 +13,14 @@
       />
     </div>
     <div v-if="players.length > 2" class="player2">
-      <el-button type="danger" plain disabled> {{ playerNext }} </el-button>
+      <el-button type="danger" style="position:absolute; transform: rotate(90deg);" plain disabled> {{ playerNext }} </el-button>
       <enemyHand v-if="playersCard" :nbcards="playersCard.get(playerNext)" />
     </div>
     <div v-if="players.length > 2" class="player3">
-      <enemyHand /><el-button type="danger" plain disabled>
+      <enemyHand /><el-button type="danger" style="position:absolute; transform: rotate(90deg);" plain disabled>
         {{ playerBehind }}
       </el-button>
-      <enemyHand v-if="playersCard" :nbcards="playersCard.get(playerBehind)" />
+      <enemyHand v-if="playersCard"  :nbcards="playersCard.get(playerBehind)" />
     </div>
     <div class="table">
       <div class="cardTapi">
@@ -36,25 +36,25 @@
     </div>
     <div class="myhand">
       <div style="display: flex">
-        <el-button style="width: 100%" plain disabled> {{ userID }}</el-button>
-        <el-tooltip placement="top">
+        <el-button  style="width: 100%" plain disabled> {{ userID }}</el-button>
+        <el-tooltip :disabled="spammer" placement="top">
           <div slot="content">
             <img
               class="gif-img"
-              src="https://media1.tenor.com/m/ktrPgmQGGnIAAAAC/tu-tunisia.gif"
+              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmN0ZHNvb2g2NDNhYWp1a3o4MnR0bXFwcDNybzV5NjMzNDAxa3hmciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LNmHOucoicX812J9am/giphy.gif"
               @click="
                 sendGif(
-                  `https://media1.tenor.com/m/ktrPgmQGGnIAAAAC/tu-tunisia.gif`
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNW9raDVxZHJrNG9hbzdlNTdueXRnazY2czd2MWY4MnFycTF5cGZxcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vnThsygWjtKWvvEGCL/giphy.gif`,'/subconscient.mp3'
                 )
               "
               alt="My GIF"
             />
             <img
               class="gif-img"
-              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXg2eXRxNGtiem9pZGZnY3FrZnk1YzN2N2VrM2U3a2hiaGxvOTVpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hryis7A55UXZNCUTNA/giphy.gif"
+              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGEzb294YTlneWpuaXI1OXhhZzUwcHVkZjhrbzN5YW54d2Zvc2xvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nuZwH6QEScfJUN7z6U/giphy-downsized-large.gif"
               @click="
                 sendGif(
-                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXg2eXRxNGtiem9pZGZnY3FrZnk1YzN2N2VrM2U3a2hiaGxvOTVpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hryis7A55UXZNCUTNA/giphy.gif`
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGEzb294YTlneWpuaXI1OXhhZzUwcHVkZjhrbzN5YW54d2Zvc2xvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nuZwH6QEScfJUN7z6U/giphy-downsized-large.gif`,'/rabi_maa_zawali.mp3'
                 )
               "
               alt="My GIF"
@@ -72,10 +72,10 @@
             <br />
             <img
               class="gif-img"
-              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXNpcHhpaXhybWs3YndsaXhtbDExMW5nOWRyeGlqY24yZWNpbHIzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KfrkgK7muB1E0c8ufO/giphy.gif"
+              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHR2NTFjZms4c2Jwamc0ZmQ0MDVubnk4NTl0cGg4MW55MTl0eXU4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kU1qORlDWErOU/giphy.gif"
               @click="
                 sendGif(
-                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXNpcHhpaXhybWs3YndsaXhtbDExMW5nOWRyeGlqY24yZWNpbHIzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KfrkgK7muB1E0c8ufO/giphy.gif`
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHR2NTFjZms4c2Jwamc0ZmQ0MDVubnk4NTl0cGg4MW55MTl0eXU4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kU1qORlDWErOU/giphy.gif`,'/thuglife.mp3'
                 )
               "
               alt="My GIF"
@@ -103,10 +103,10 @@
             <br />
             <img
               class="gif-img"
-              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDR3aWppeW14bzh6eGh6Mmhxb29lYTY5M3YybzI2cDUxMmR2MmUydSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pslhuiH7jqzNixBV3S/giphy.gif"
+              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDJicTR2dmtocGJ6cnBxcnRyeGZnanU3b2hwOW9lN2N2ZTdmcjV3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmX0qssjbBv5d3ehUv/giphy.gif"
               @click="
                 sendGif(
-                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDR3aWppeW14bzh6eGh6Mmhxb29lYTY5M3YybzI2cDUxMmR2MmUydSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pslhuiH7jqzNixBV3S/giphy.gif`
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDJicTR2dmtocGJ6cnBxcnRyeGZnanU3b2hwOW9lN2N2ZTdmcjV3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmX0qssjbBv5d3ehUv/giphy.gif`,'/rajel.mp3'
                 )
               "
               alt="My GIF"
@@ -116,7 +116,7 @@
               src="https://media1.tenor.com/m/BkxBJpfByvEAAAAC/vraiment-tunisie.gif"
               @click="
                 sendGif(
-                  `https://media1.tenor.com/m/BkxBJpfByvEAAAAC/vraiment-tunisie.gif`
+                  `https://media1.tenor.com/m/BkxBJpfByvEAAAAC/vraiment-tunisie.gif`,'/yarhilwaldik.mp3'
                 )
               "
               alt="My GIF"
@@ -126,13 +126,13 @@
               src="https://media1.tenor.com/m/ngoZGMzKjq8AAAAC/kais-said-president-ka%C3%AFs-sa%C3%AFed.gif"
               @click="
                 sendGif(
-                  `https://media1.tenor.com/m/ngoZGMzKjq8AAAAC/kais-said-president-ka%C3%AFs-sa%C3%AFed.gif`
+                  `https://media1.tenor.com/m/ngoZGMzKjq8AAAAC/kais-said-president-ka%C3%AFs-sa%C3%AFed.gif`,'/kaysoun.mp3'
                 )
               "
               alt="My GIF"
             />
           </div>
-          <el-button icon="el-icon-chat-dot-round" circle></el-button
+          <el-button :disabled="spammer" icon="el-icon-chat-dot-round" circle></el-button
         ></el-tooltip>
       </div>
 
@@ -153,15 +153,16 @@
         >ارمي</el-button
       >
     </div>
-    <el-dialog title="Addition" :visible.sync="gameover" width="80%" center>
+    <el-dialog title="Addition" :visible.sync="gameover" width="100%" center>
       <!-- Displays the object as a string -->
 
       <table style="width: 100%" border="1" cellpadding="10">
         <thead>
           <tr>
-            <th>Player</th>
-            <th>Suit</th>
-          
+            <th>اللاعب</th>
+           
+            <th>1+1 الرياضيات</th> 
+            <th>الرشمة</th>
           </tr>
         </thead>
         <tbody>
@@ -170,10 +171,11 @@
             <td>{{ key }}</td>
             <td>
               <div class="myhandstat">
-               <strong>{{ analyzeDeck(value) }}</strong>
+               <strong>{{ analyzeDeck(value).info }}</strong>
               
               </div>
             </td>
+            <td>{{ analyzeDeck(value).total }}</td>
             <!-- Display each card for the player -->
           </tr>
         </tbody>
@@ -236,6 +238,8 @@ export default {
   middleware: ["auth"],
   data() {
     return {
+      
+      spammer:false,
       soundeffect: "",
       selectedCard: null,
       listCardToEat: [],
@@ -299,16 +303,21 @@ export default {
     let countNumber6 = 0;
     let countNumber7Rectangle = 0;
     let countBlackChkoba = 0;
+    let dineri=0;
+    let birmila=0
 
     // Iterate through each card in the deck
     deck.forEach(card => {
         // Count total cards with number 7
-        if (card.suit != 'Rectangle' && card.number === 7) {
+        if (card.number === 7) {
             countNumber7++;
         }
         // Count total cards with number 6
         if (card.number === 6) {
             countNumber6++;
+        }
+        if (card.suit === 'Rectangle' ) {
+          dineri++;
         }
         // Count cards with suit Rectangle and number 7
         if (card.suit === 'Rectangle' && card.number === 7) {
@@ -319,15 +328,20 @@ export default {
             countBlackChkoba++;
         }
     });
+   if(countNumber7Rectangle>2 ){
+    birmila=1
+   }else{
+    if(countNumber6>2 )
+    birmila=1 
+   }
+  
+    return {info :`♢ = ${dineri}  ;🐍 = ${countNumber7Rectangle}   ; carta =${totalCards-countBlackChkoba} ; 🛢 = ${birmila} ;♛ = ${countBlackChkoba} `,
+      total : (birmila == 1) + (dineri > 5) + countNumber7Rectangle + countBlackChkoba+ (totalCards-countBlackChkoba>20)
+
+     }
 
     // Return the results as an object
-    return {
-       carta: totalCards-countBlackChkoba,
-       sbou3: countNumber7+countNumber7Rectangle,
-       stout: countNumber6,
-       l7aya: countNumber7Rectangle,
-       chkeyb: countBlackChkoba
-    };
+
 },
     gameoverReplay() {
       this.ws.send(
@@ -416,14 +430,19 @@ export default {
 
       this.selectedCard = null;
     },
-    sendGif(gif) {
-      if (gif)
+    sendGif(gif,audio) {
+      this.spammer=true;
+      setTimeout(() => {
+        this.spammer = false; // Allow function to be executed again
+        }, 4000); 
+      if (gif )
         this.ws.send(
           JSON.stringify({
             type: "gif",
             operation: "message",
             data: gif,
             mycard: this.userID,
+            sound: audio ? audio : "none" 
           })
         );
       else console.log("no gif selected");
@@ -451,7 +470,17 @@ export default {
       }
       console.log(this.listCardToEat); // Log the current state of listCardToEat
     },
+playsong(song){
+  this.soundeffect = song;
+            console.log("playing" + this.soundeffect);
+            const audioElement = this.$refs.backgroundMusic;
+            audioElement.src = this.soundeffect; // Set the new source
+            audioElement.load(); // Load the new audio
+            audioElement.play().catch((error) => {
+              console.error("Playback failed:", error);
+            });
 
+},
     getCardClass(card) {
       const listTapi = this.listCardToEat;
       let somme = 0;
@@ -543,22 +572,13 @@ export default {
           this.myHand = receivedData.data;
           console.log(new Map(receivedData.otherPlayer));
           this.playersCard = new Map(receivedData.otherPlayer);
-          console.log(this.playersCard.get("d"));
+         
         } else if (receivedData.operation === "getTapi") {
           this.tableCards = receivedData.data;
           this.playerTurn = receivedData.turn;
           if (this.tableCards.length == 0) {
-            this.soundeffect = "/jhonsina.mp3";
-            console.log("playing" + this.soundeffect);
-
-            // Update the audio source element
-            const audioElement = this.$refs.backgroundMusic;
-            audioElement.src = this.soundeffect; // Set the new source
-            audioElement.load(); // Load the new audio
-
-            audioElement.play().catch((error) => {
-              console.error("Playback failed:", error);
-            });
+            this.playsong("/jhonsina.mp3")
+      
           }
         } else if (receivedData.operation === "endGame") {
           this.gameoverstat = receivedData.data;
@@ -583,26 +603,15 @@ export default {
           this.eatMove.data = receivedData.data;
           this.eatMove.card = receivedData.card;
           this.eatMove.on = true;
-          if (
-            this.eatMove.card.number == 7 ||
-            this.eatMove.data.some((card) => card.number == 7)
-          ) {
-            this.soundeffect = "/ghabra.mp3";
-            console.log("playing" + this.soundeffect);
-
-            // Update the audio source element
-            const audioElement = this.$refs.backgroundMusic;
-            audioElement.src = this.soundeffect; // Set the new source
-            audioElement.load(); // Load the new audio
-
-            audioElement.play().catch((error) => {
-              console.error("Playback failed:", error);
-            });
-          }
+          if (  this.eatMove.card.number == 7 ||  this.eatMove.data.some((card) => card.number == 7)) { this.playsong("/ghabra.mp3")}
+          else if(this.eatMove.card.number == 3){ this.playsong("/hablih3dt.mp3")}    else if(this.eatMove.card.number == 9){ this.playsong("/raysbata.mp3")} else if(this.eatMove.card.number == 1){ this.playsong("/fakir.mp3")}
+          
+       //
           setTimeout(() => {
             this.eatMove.on = false;
           }, 2000);
         } else if (receivedData.operation === "message") {
+
           this.$notify({
             title: receivedData.mycard,
             customClass: "msg_gif",
@@ -611,6 +620,7 @@ export default {
             message: `<img style=" width: 80%;height: 80%;" class="gif-img" src=${receivedData.data} alt="My GIF">`,
             showClose: true,
           });
+          if(receivedData.sound!='none')this.playsong(receivedData.sound)
         }
       };
     },

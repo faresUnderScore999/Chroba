@@ -67,6 +67,7 @@
 
       <el-dialog width="95%" :visible.sync="dialogFormVisibleJoin">
         <div style="display: grid; justify-content: center">
+          
           <input
             v-model="username"
             type="text"
