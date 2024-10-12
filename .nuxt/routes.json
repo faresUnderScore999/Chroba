@@ -2,36 +2,36 @@
   {
     "name": "animation",
     "path": "/animation",
-    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\animation.vue",
+    "component": "C:\\\\Users\\\\user\\\\Documents\\\\chkoba_front\\\\pages\\\\animation.vue",
     "chunkName": "pages/animation",
-    "_name": "_7caa2b22"
+    "_name": "_29a5b048"
   },
   {
     "name": "game",
     "path": "/game",
-    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\game.vue",
+    "component": "C:\\\\Users\\\\user\\\\Documents\\\\chkoba_front\\\\pages\\\\game.vue",
     "chunkName": "pages/game",
-    "_name": "_6bda4f57"
+    "_name": "_0eb8a1ca"
   },
   {
     "name": "protected",
     "path": "/protected",
-    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\protected.vue",
+    "component": "C:\\\\Users\\\\user\\\\Documents\\\\chkoba_front\\\\pages\\\\protected.vue",
     "chunkName": "pages/protected",
-    "_name": "_b63bd4ce"
+    "_name": "_633759f4"
   },
   {
     "name": "test",
     "path": "/test",
-    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\test.vue",
+    "component": "C:\\\\Users\\\\user\\\\Documents\\\\chkoba_front\\\\pages\\\\test.vue",
     "chunkName": "pages/test",
-    "_name": "_de1a1012"
+    "_name": "_33d14a6a"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\user\\\\Desktop\\\\chkoba\\\\finalProject\\\\chkoba-front\\\\chkoba_front\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\user\\\\Documents\\\\chkoba_front\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_b37c7b86"
+    "_name": "_5f2dbe2a"
   }
 ]

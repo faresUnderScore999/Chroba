@@ -4,11 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _7caa2b22 = () => interopDefault(import('..\\pages\\animation.vue' /* webpackChunkName: "pages/animation" */))
-const _6bda4f57 = () => interopDefault(import('..\\pages\\game.vue' /* webpackChunkName: "pages/game" */))
-const _b63bd4ce = () => interopDefault(import('..\\pages\\protected.vue' /* webpackChunkName: "pages/protected" */))
-const _de1a1012 = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
-const _b37c7b86 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _29a5b048 = () => interopDefault(import('..\\pages\\animation.vue' /* webpackChunkName: "pages/animation" */))
+const _0eb8a1ca = () => interopDefault(import('..\\pages\\game.vue' /* webpackChunkName: "pages/game" */))
+const _633759f4 = () => interopDefault(import('..\\pages\\protected.vue' /* webpackChunkName: "pages/protected" */))
+const _33d14a6a = () => interopDefault(import('..\\pages\\test.vue' /* webpackChunkName: "pages/test" */))
+const _5f2dbe2a = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -23,23 +23,23 @@ export const routerOptions = {
 
   routes: [{
     path: "/animation",
-    component: _7caa2b22,
+    component: _29a5b048,
     name: "animation"
   }, {
     path: "/game",
-    component: _6bda4f57,
+    component: _0eb8a1ca,
     name: "game"
   }, {
     path: "/protected",
-    component: _b63bd4ce,
+    component: _633759f4,
     name: "protected"
   }, {
     path: "/test",
-    component: _de1a1012,
+    component: _33d14a6a,
     name: "test"
   }, {
     path: "/",
-    component: _b37c7b86,
+    component: _5f2dbe2a,
     name: "index"
   }],
 

@@ -1,0 +1,25 @@
+{
+  "entry": "server.js",
+  "files": {
+    "components/card-table.js": "components/card-table.js",
+    "components/enemy-hand.js": "components/enemy-hand.js",
+    "components/my-hand.js": "components/my-hand.js",
+    "pages/animation.js": "pages/animation.js",
+    "pages/game.js": "pages/game.js",
+    "pages/index.js": "pages/index.js",
+    "pages/protected.js": "pages/protected.js",
+    "pages/test.js": "pages/test.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "components/card-table.js": "components/card-table.js.map",
+    "components/enemy-hand.js": "components/enemy-hand.js.map",
+    "components/my-hand.js": "components/my-hand.js.map",
+    "pages/animation.js": "pages/animation.js.map",
+    "pages/game.js": "pages/game.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/protected.js": "pages/protected.js.map",
+    "pages/test.js": "pages/test.js.map",
+    "server.js": "server.js.map"
+  }
+}

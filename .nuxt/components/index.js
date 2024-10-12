@@ -1,6 +1,6 @@
-export { default as CardTable } from '../..\\components\\cardTable.vue'
-export { default as EnemyHand } from '../..\\components\\enemyHand.vue'
-export { default as MyHand } from '../..\\components\\myHand.vue'
+export const CardTable = () => import('../..\\components\\cardTable.vue' /* webpackChunkName: "components/card-table" */).then(c => wrapFunctional(c.default || c))
+export const EnemyHand = () => import('../..\\components\\enemyHand.vue' /* webpackChunkName: "components/enemy-hand" */).then(c => wrapFunctional(c.default || c))
+export const MyHand = () => import('../..\\components\\myHand.vue' /* webpackChunkName: "components/my-hand" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
