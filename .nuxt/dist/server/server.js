@@ -115,7 +115,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 49);
+/******/ 	return __webpack_require__(__webpack_require__.s = 50);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -3159,7 +3159,7 @@ module.exports = function (url, options) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(53);
+var content = __webpack_require__(54);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -3176,7 +3176,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(55);
+var content = __webpack_require__(56);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -3193,7 +3193,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(61);
+var content = __webpack_require__(62);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -49424,7 +49424,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 /***/ })
 /******/ ])["default"];
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(64)["URL"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(49)["URL"]))
 
 /***/ }),
 /* 46 */
@@ -49572,14 +49572,20 @@ module.exports = __webpack_require__.p + "img/background_mobile.7d4b5d2.png";
 
 /***/ }),
 /* 49 */
+/***/ (function(module, exports) {
+
+module.exports = require("url");
+
+/***/ }),
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(50);
+__webpack_require__(51);
 module.exports = __webpack_require__(91);
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 global.installComponents = function (component, components) {
@@ -49623,7 +49629,7 @@ function provideFunctionalComponents(component, components) {
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49647,7 +49653,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49658,7 +49664,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -49672,7 +49678,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49683,7 +49689,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -49697,27 +49703,27 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(58);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(9).default("2b7d3ed3", content, true)
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(8);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(27);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(58);
-var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(59);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(59);
+var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(60);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
@@ -49729,19 +49735,19 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/element-icons.535877f.woff";
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/element-icons.732389d.ttf";
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49752,7 +49758,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -49771,7 +49777,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49781,7 +49787,7 @@ __webpack_require__.r(__webpack_exports__);
 const state = () => ({});
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49818,12 +49824,6 @@ const getters = {
     return state.table;
   }
 };
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports) {
-
-module.exports = require("url");
 
 /***/ }),
 /* 65 */
@@ -69162,7 +69162,7 @@ var external_node_fetch_native_default = /*#__PURE__*/__webpack_require__.n(exte
 
 // CONCATENATED MODULE: ./.nuxt/middleware.js
 const middleware = {};
-middleware['auth'] = __webpack_require__(51);
+middleware['auth'] = __webpack_require__(52);
 middleware['auth'] = middleware['auth'].default || middleware['auth'];
 /* harmony default export */ var _nuxt_middleware = (middleware);
 // CONCATENATED MODULE: ./.nuxt/utils.js
@@ -69336,7 +69336,7 @@ async function setContext(app, context) {
   // If context not defined, create it
   if (!app.context) {
     app.context = {
-      isStatic: false,
+      isStatic: true,
       isDev: false,
       isHMR: false,
       app,
@@ -69880,8 +69880,8 @@ function shouldScrollToTop(route) {
 
 
 
-const _29a5b048 = () => interopDefault(__webpack_require__.e(/* import() | pages/animation */ 4).then(__webpack_require__.bind(null, 178)));
-const _0eb8a1ca = () => interopDefault(__webpack_require__.e(/* import() | pages/game */ 5).then(__webpack_require__.bind(null, 179)));
+const _29a5b048 = () => interopDefault(__webpack_require__.e(/* import() | pages/animation */ 4).then(__webpack_require__.bind(null, 179)));
+const _0eb8a1ca = () => interopDefault(__webpack_require__.e(/* import() | pages/game */ 5).then(__webpack_require__.bind(null, 183)));
 const _633759f4 = () => interopDefault(__webpack_require__.e(/* import() | pages/protected */ 7).then(__webpack_require__.bind(null, 180)));
 const _33d14a6a = () => interopDefault(__webpack_require__.e(/* import() | pages/test */ 8).then(__webpack_require__.bind(null, 181)));
 const _5f2dbe2a = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 6).then(__webpack_require__.bind(null, 182)));
@@ -70069,7 +70069,7 @@ var componentNormalizer = __webpack_require__(4);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(52)
+  var style0 = __webpack_require__(53)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -70335,7 +70335,7 @@ var nuxt_loading_render, nuxt_loading_staticRenderFns
 
 function nuxt_loading_injectStyles (context) {
   
-  var style0 = __webpack_require__(54)
+  var style0 = __webpack_require__(55)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -70355,7 +70355,7 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var nuxt_loading = (nuxt_loading_component.exports);
 // EXTERNAL MODULE: ./node_modules/element-ui/lib/theme-chalk/index.css
-var theme_chalk = __webpack_require__(56);
+var theme_chalk = __webpack_require__(57);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/gameLayout.vue?vue&type=template&id=80f401d2
 var gameLayoutvue_type_template_id_80f401d2_render = function render() {
@@ -70419,7 +70419,7 @@ var gameLayoutvue_type_template_id_80f401d2_staticRenderFns = [];
 
 function gameLayout_injectStyles (context) {
   
-  var style0 = __webpack_require__(60)
+  var style0 = __webpack_require__(61)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -70542,6 +70542,9 @@ const layouts = {
     },
     isFetching() {
       return this.nbFetching > 0;
+    },
+    isPreview() {
+      return Boolean(this.$options.previewData);
     }
   },
   methods: {
@@ -70635,13 +70638,13 @@ external_vue_default.a.use(external_vuex_default.a);
 const VUEX_PROPERTIES = ['state', 'getters', 'actions', 'mutations'];
 let store_store = {};
 (function updateModules() {
-  store_store = normalizeRoot(__webpack_require__(62), 'store/index.js');
+  store_store = normalizeRoot(__webpack_require__(63), 'store/index.js');
 
   // If store is an exported method = classic mode (deprecated)
 
   // Enforce store modules
   store_store.modules = store_store.modules || {};
-  resolveStoreModules(__webpack_require__(63), 'gameLogic.js');
+  resolveStoreModules(__webpack_require__(64), 'gameLogic.js');
 
   // If the environment supports hot reloading...
 })();
@@ -70743,9 +70746,9 @@ function mergeProperty(storeModule, moduleData, property) {
   }
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
-const CardTable = () => __webpack_require__.e(/* import() | components/card-table */ 1).then(__webpack_require__.bind(null, 162)).then(c => wrapFunctional(c.default || c));
-const EnemyHand = () => __webpack_require__.e(/* import() | components/enemy-hand */ 2).then(__webpack_require__.bind(null, 161)).then(c => wrapFunctional(c.default || c));
-const MyHand = () => __webpack_require__.e(/* import() | components/my-hand */ 3).then(__webpack_require__.bind(null, 160)).then(c => wrapFunctional(c.default || c));
+const CardTable = () => __webpack_require__.e(/* import() | components/card-table */ 1).then(__webpack_require__.bind(null, 163)).then(c => wrapFunctional(c.default || c));
+const EnemyHand = () => __webpack_require__.e(/* import() | components/enemy-hand */ 2).then(__webpack_require__.bind(null, 162)).then(c => wrapFunctional(c.default || c));
+const MyHand = () => __webpack_require__.e(/* import() | components/my-hand */ 3).then(__webpack_require__.bind(null, 161)).then(c => wrapFunctional(c.default || c));
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

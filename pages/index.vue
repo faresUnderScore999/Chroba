@@ -1,8 +1,11 @@
 <template>
-  <div v-loading="loading"
+  <div
+    v-loading="loading"
     element-loading-text="Loading..."
     element-loading-spinner="el-icon-loading"
-    element-loading-background="rgba(0, 0, 0, 0.8)" class="background-main">
+    element-loading-background="rgba(0, 0, 0, 0.8)"
+    class="background-main"
+  >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -37,8 +40,6 @@
         @click="playVSai"
       />
 
-    
-   
       <!-- Dialog for Room ID -->
       <el-dialog width="95%" :visible.sync="dialogFormVisible">
         <div style="display: grid; justify-content: center">
@@ -49,7 +50,7 @@
             required
           />
           <br />
-          <label>عدد  اللاعبين:</label>
+          <label>عدد اللاعبين:</label>
           <br />
           <el-input-number
             v-model="nbPlayer"
@@ -57,17 +58,16 @@
             :max="4"
             :step="2"
           ></el-input-number>
+          <p v-if="error">{{ error }}</p>
         </div>
 
         <span slot="footer" class="dialog-footer">
-        
           <el-button type="primary" @click="submitRoomID">إنشاء لعبة</el-button>
         </span>
       </el-dialog>
 
       <el-dialog width="95%" :visible.sync="dialogFormVisibleJoin">
         <div style="display: grid; justify-content: center">
-          
           <input
             v-model="username"
             type="text"
@@ -86,16 +86,19 @@
         </div>
 
         <span slot="footer" class="dialog-footer">
-        
-          <el-button type="primary" @click="submitRoomID">الانضمام إلى اللعبة</el-button>
+          <el-button type="primary" @click="submitRoomID"
+            >الانضمام إلى اللعبة</el-button
+          >
         </span>
       </el-dialog>
     </form>
-    <footer style="color: aliceblue;">
+    <footer style="color: aliceblue">
       <p>&copy; 2024 Monkey.zip. All rights reserved.</p>
       <p>
         Contact us:
-        <a style="color: aliceblue;" href="mailto:benalifares@gmail.com">benalifares999@gmail.com</a>
+        <a style="color: aliceblue" href="mailto:benalifares@gmail.com"
+          >benalifares999@gmail.com</a
+        >
         <a
           style="margin: 10px"
           href="https://www.facebook.com/fares.ben.735507/"
@@ -120,7 +123,7 @@ export default {
   auth: false,
   data() {
     return {
-      loading:false,
+      loading: false,
       dialogFormVisibleJoin: false,
       dialogFormVisible: false,
       username: "",
@@ -134,16 +137,16 @@ export default {
     this.RoomID = this.$route.query.roomID;
   },
   methods: {
-    playVSai(){
-      this.username="PLAYER"
-      this.nbPlayer=1
-this.login()
+    playVSai() {
+      this.username = "PLAYER";
+      this.nbPlayer = 1;
+      this.login();
     },
     async login() {
       try {
         // Call the login endpoint
         if (this.roomID == "") {
-          this.loading=true
+          this.loading = true;
           console.warn("creating room");
           const response = await this.$auth.loginWith("local", {
             data: {
@@ -164,7 +167,7 @@ this.login()
 
         const res = await this.$axios.get("/protected");
         console.log(res);
-        this.loading=false
+
         // After login, redirect to a protected route or show success message
         this.$router.push("/game");
       } catch (err) {
@@ -176,18 +179,19 @@ this.login()
         } else {
           this.error = "An unexpected error occurred."; // Generic error message
         }
+      } finally {
+        this.loading = false;
       }
     },
 
     async submitRoomID() {
-      this.dialogFormVisible = false; // Close the dialog
       await this.login(); // Call the login function
     },
   },
 };
 </script>
 <style scoped>
-i{
+i {
   color: aliceblue;
 }
 footer {

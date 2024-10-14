@@ -6,21 +6,34 @@
     </audio>
 
     <div class="player1">
-      <el-button type="danger" plain disabled> {{ playerInfront }} </el-button
+      <el-button type="danger" plain disabled>
+        {{ playerInfront }}  </el-button
       ><enemyHand
         v-if="playersCard"
         :nbcards="playersCard.get(playerInfront)"
       />
     </div>
     <div v-if="players.length > 2" class="player2">
-      <el-button type="danger" style="position:absolute; transform: rotate(90deg);" plain disabled> {{ playerNext }} </el-button>
+      <el-button
+        type="danger"
+        style="position: absolute; transform: rotate(90deg)"
+        plain
+        disabled
+      >
+        {{ playerNext }}
+      </el-button>
       <enemyHand v-if="playersCard" :nbcards="playersCard.get(playerNext)" />
     </div>
     <div v-if="players.length > 2" class="player3">
-      <enemyHand /><el-button type="danger" style="position:absolute; transform: rotate(90deg);" plain disabled>
+      <enemyHand /><el-button
+        type="danger"
+        style="position: absolute; transform: rotate(90deg)"
+        plain
+        disabled
+      >
         {{ playerBehind }}
       </el-button>
-      <enemyHand v-if="playersCard"  :nbcards="playersCard.get(playerBehind)" />
+      <enemyHand v-if="playersCard" :nbcards="playersCard.get(playerBehind)" />
     </div>
     <div class="table">
       <div class="cardTapi">
@@ -36,7 +49,9 @@
     </div>
     <div class="myhand">
       <div style="display: flex">
-        <el-button  style="width: 100%" plain disabled> {{ userID }}</el-button>
+        <el-button style="width: 100%" plain disabled>
+          {{ userID }} : {{ myScore }} - {{ enemyScore }}</el-button
+        >
         <el-tooltip :disabled="spammer" placement="top">
           <div slot="content">
             <img
@@ -44,7 +59,8 @@
               src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmN0ZHNvb2g2NDNhYWp1a3o4MnR0bXFwcDNybzV5NjMzNDAxa3hmciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LNmHOucoicX812J9am/giphy.gif"
               @click="
                 sendGif(
-                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNW9raDVxZHJrNG9hbzdlNTdueXRnazY2czd2MWY4MnFycTF5cGZxcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vnThsygWjtKWvvEGCL/giphy.gif`,'/subconscient.mp3'
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNW9raDVxZHJrNG9hbzdlNTdueXRnazY2czd2MWY4MnFycTF5cGZxcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vnThsygWjtKWvvEGCL/giphy.gif`,
+                  '/subconscient.mp3'
                 )
               "
               alt="My GIF"
@@ -54,7 +70,8 @@
               src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGEzb294YTlneWpuaXI1OXhhZzUwcHVkZjhrbzN5YW54d2Zvc2xvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nuZwH6QEScfJUN7z6U/giphy-downsized-large.gif"
               @click="
                 sendGif(
-                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGEzb294YTlneWpuaXI1OXhhZzUwcHVkZjhrbzN5YW54d2Zvc2xvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nuZwH6QEScfJUN7z6U/giphy-downsized-large.gif`,'/rabi_maa_zawali.mp3'
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGEzb294YTlneWpuaXI1OXhhZzUwcHVkZjhrbzN5YW54d2Zvc2xvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nuZwH6QEScfJUN7z6U/giphy-downsized-large.gif`,
+                  '/rabi_maa_zawali.mp3'
                 )
               "
               alt="My GIF"
@@ -75,7 +92,8 @@
               src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHR2NTFjZms4c2Jwamc0ZmQ0MDVubnk4NTl0cGg4MW55MTl0eXU4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kU1qORlDWErOU/giphy.gif"
               @click="
                 sendGif(
-                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHR2NTFjZms4c2Jwamc0ZmQ0MDVubnk4NTl0cGg4MW55MTl0eXU4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kU1qORlDWErOU/giphy.gif`,'/thuglife.mp3'
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHR2NTFjZms4c2Jwamc0ZmQ0MDVubnk4NTl0cGg4MW55MTl0eXU4NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kU1qORlDWErOU/giphy.gif`,
+                  '/thuglife.mp3'
                 )
               "
               alt="My GIF"
@@ -106,7 +124,8 @@
               src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDJicTR2dmtocGJ6cnBxcnRyeGZnanU3b2hwOW9lN2N2ZTdmcjV3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmX0qssjbBv5d3ehUv/giphy.gif"
               @click="
                 sendGif(
-                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDJicTR2dmtocGJ6cnBxcnRyeGZnanU3b2hwOW9lN2N2ZTdmcjV3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmX0qssjbBv5d3ehUv/giphy.gif`,'/rajel.mp3'
+                  `https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDJicTR2dmtocGJ6cnBxcnRyeGZnanU3b2hwOW9lN2N2ZTdmcjV3bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmX0qssjbBv5d3ehUv/giphy.gif`,
+                  '/rajel.mp3'
                 )
               "
               alt="My GIF"
@@ -116,7 +135,8 @@
               src="https://media1.tenor.com/m/BkxBJpfByvEAAAAC/vraiment-tunisie.gif"
               @click="
                 sendGif(
-                  `https://media1.tenor.com/m/BkxBJpfByvEAAAAC/vraiment-tunisie.gif`,'/yarhilwaldik.mp3'
+                  `https://media1.tenor.com/m/BkxBJpfByvEAAAAC/vraiment-tunisie.gif`,
+                  '/yarhilwaldik.mp3'
                 )
               "
               alt="My GIF"
@@ -126,14 +146,33 @@
               src="https://media1.tenor.com/m/ngoZGMzKjq8AAAAC/kais-said-president-ka%C3%AFs-sa%C3%AFed.gif"
               @click="
                 sendGif(
-                  `https://media1.tenor.com/m/ngoZGMzKjq8AAAAC/kais-said-president-ka%C3%AFs-sa%C3%AFed.gif`,'/kaysoun.mp3'
+                  `https://media1.tenor.com/m/ngoZGMzKjq8AAAAC/kais-said-president-ka%C3%AFs-sa%C3%AFed.gif`,
+                  '/kaysoun.mp3'
                 )
               "
               alt="My GIF"
             />
           </div>
-          <el-button :disabled="spammer" icon="el-icon-chat-dot-round" circle></el-button
+          <el-button
+            :disabled="spammer"
+            icon="el-icon-chat-dot-round"
+            circle
+          ></el-button
         ></el-tooltip>
+        <div>
+          <el-button
+            icon="el-icon-microphone"
+            @click="startStreaming"
+            v-if="!isStreaming"
+            circle
+          ></el-button>
+          <el-button
+            icon="el-icon-position"
+            @click="stopStreaming"
+            v-if="isStreaming"
+            circle
+          ></el-button>
+        </div>
       </div>
 
       <div id="waiting" v-if="playerTurn != userID">
@@ -160,8 +199,8 @@
         <thead>
           <tr>
             <th>اللاعب</th>
-           
-            <th>1+1 الرياضيات</th> 
+
+            <th>1+1 الرياضيات</th>
             <th>الرشمة</th>
           </tr>
         </thead>
@@ -171,17 +210,15 @@
             <td>{{ key }}</td>
             <td>
               <div class="myhandstat">
-               <strong>{{ analyzeDeck(value).info }}</strong>
-              
+                <strong>{{ (me = analyzeDeck(value).info) }}</strong>
               </div>
             </td>
-            <td>{{ analyzeDeck(value).total }}</td>
+            <td>{{ (enemy = analyzeDeck(value).total) }}</td>
             <!-- Display each card for the player -->
           </tr>
         </tbody>
       </table>
       <span slot="footer" class="dialog-footer">
-      
         <el-button @click="gameoverReplay">العب مرة أخرى</el-button>
       </span>
     </el-dialog>
@@ -238,8 +275,7 @@ export default {
   middleware: ["auth"],
   data() {
     return {
-      
-      spammer:false,
+      spammer: false,
       soundeffect: "",
       selectedCard: null,
       listCardToEat: [],
@@ -265,14 +301,14 @@ export default {
       ],
       gameoverstat: {
         f: [],
-        d: [
-          { number: 1, suit: "Heart" },
-          { number: 2, suit: "Heart" },
-          { number: 3, suit: "Heart" },
-        ],
+        d: [],
       },
+      mediaRecorder: null,
+      audioStream: null,
+      isStreaming: false,
       players: [],
-
+      enemyScore: 0,
+      myScore: 0,
       playerInfront: "",
       playerNext: "",
       playerBehind: "",
@@ -283,6 +319,30 @@ export default {
   },
   watch: {
     myHand: async function (newValue, oldValue) {},
+    gameoverstat: function () {
+      for (const [key, value] of Object.entries(this.gameoverstat)) {
+        if (this.players.length > 2) {
+          if (key == this.userID) {
+            this.myScore += this.analyzeDeck(value).total;
+          }
+          if (key == this.playerNext) {
+            this.enemyScore += this.analyzeDeck(value).total;
+          }
+          if (key == this.playerBehind) {
+            this.enemyScore += this.analyzeDeck(value).total;
+          }
+          if (key == this.playerInfront) {
+            this.myScore += this.analyzeDeck(value).total;
+          }
+        } else {
+          if (key == this.userID) {
+            this.myScore += this.analyzeDeck(value).total;
+          } else {
+            this.enemyScore += this.analyzeDeck(value).total;
+          }
+        }
+      }
+    },
   },
   async mounted() {
     await this.connectWebSocket();
@@ -297,52 +357,57 @@ export default {
   },
   methods: {
     analyzeDeck(deck) {
-    // Initialize counters
-    const totalCards = deck.length;
-    let countNumber7 = 0;
-    let countNumber6 = 0;
-    let countNumber7Rectangle = 0;
-    let countBlackChkoba = 0;
-    let dineri=0;
-    let birmila=0
+      // Initialize counters
+      const totalCards = deck.length;
+      let countNumber7 = 0;
+      let countNumber6 = 0;
+      let countNumber7Rectangle = 0;
+      let countBlackChkoba = 0;
+      let dineri = 0;
+      let birmila = 0;
 
-    // Iterate through each card in the deck
-    deck.forEach(card => {
+      // Iterate through each card in the deck
+      deck.forEach((card) => {
         // Count total cards with number 7
         if (card.number === 7) {
-            countNumber7++;
+          countNumber7++;
         }
         // Count total cards with number 6
         if (card.number === 6) {
-            countNumber6++;
+          countNumber6++;
         }
-        if (card.suit === 'Rectangle' ) {
+        if (card.suit === "Rectangle") {
           dineri++;
         }
         // Count cards with suit Rectangle and number 7
-        if (card.suit === 'Rectangle' && card.number === 7) {
-            countNumber7Rectangle++;
+        if (card.suit === "Rectangle" && card.number === 7) {
+          countNumber7Rectangle++;
         }
         // Count cards with suit Black and number Chkoba
-        if (card.suit === 'back' && card.number === 'Chkobba') {
-            countBlackChkoba++;
+        if (card.suit === "back" && card.number === "Chkobba") {
+          countBlackChkoba++;
         }
-    });
-   if(countNumber7Rectangle>2 ){
-    birmila=1
-   }else{
-    if(countNumber6>2 )
-    birmila=1 
-   }
-  
-    return {info :`♢ = ${dineri}  ;🐍 = ${countNumber7Rectangle}   ; carta =${totalCards-countBlackChkoba} ; 🛢 = ${birmila} ;♛ = ${countBlackChkoba} `,
-      total : (birmila == 1) + (dineri > 5) + countNumber7Rectangle + countBlackChkoba+ (totalCards-countBlackChkoba>20)
+      });
+      if (countNumber7Rectangle > 2) {
+        birmila = 1;
+      } else {
+        if (countNumber6 > 2) birmila = 1;
+      }
 
-     }
+      return {
+        info: `♢ = ${dineri}  ;🐍 = ${countNumber7Rectangle}   ; carta =${
+          totalCards - countBlackChkoba
+        } ; 🛢 = ${birmila} ;♛ = ${countBlackChkoba} `,
+        total:
+          (birmila == 1) +
+          (dineri > 5) +
+          countNumber7Rectangle +
+          countBlackChkoba +
+          (totalCards - countBlackChkoba > 20),
+      };
 
-    // Return the results as an object
-
-},
+      // Return the results as an object
+    },
     gameoverReplay() {
       this.ws.send(
         JSON.stringify({
@@ -430,19 +495,19 @@ export default {
 
       this.selectedCard = null;
     },
-    sendGif(gif,audio) {
-      this.spammer=true;
+    sendGif(gif, audio) {
+      this.spammer = true;
       setTimeout(() => {
         this.spammer = false; // Allow function to be executed again
-        }, 4000); 
-      if (gif )
+      }, 4000);
+      if (gif)
         this.ws.send(
           JSON.stringify({
             type: "gif",
             operation: "message",
             data: gif,
             mycard: this.userID,
-            sound: audio ? audio : "none" 
+            sound: audio ? audio : "none",
           })
         );
       else console.log("no gif selected");
@@ -470,17 +535,16 @@ export default {
       }
       console.log(this.listCardToEat); // Log the current state of listCardToEat
     },
-playsong(song){
-  this.soundeffect = song;
-            console.log("playing" + this.soundeffect);
-            const audioElement = this.$refs.backgroundMusic;
-            audioElement.src = this.soundeffect; // Set the new source
-            audioElement.load(); // Load the new audio
-            audioElement.play().catch((error) => {
-              console.error("Playback failed:", error);
-            });
-
-},
+    playsong(song) {
+      this.soundeffect = song;
+      console.log("playing" + this.soundeffect);
+      const audioElement = this.$refs.backgroundMusic;
+      audioElement.src = this.soundeffect; // Set the new source
+      audioElement.load(); // Load the new audio
+      audioElement.play().catch((error) => {
+        console.error("Playback failed:", error);
+      });
+    },
     getCardClass(card) {
       const listTapi = this.listCardToEat;
       let somme = 0;
@@ -501,12 +565,21 @@ playsong(song){
       // Check if selectedCard exists and has a number property
       if (!this.selectedCard || typeof this.selectedCard.number !== "number")
         return "";
-      if (somme === this.selectedCard.number)  {
-        console.log("i chose" +card.number)
-        console.log('his.tableCards.some ='+ this.tableCards.some( (item) => item.number == card.number ))
-        console.log(this.tableCards)
-        if(  this.tableCards.some( (item) => item.number == this.selectedCard.number )&&listTapi.length!==1)  return "imgPreventSelected";
-        
+      if (somme === this.selectedCard.number) {
+        console.log("i chose" + card.number);
+        console.log(
+          "his.tableCards.some =" +
+            this.tableCards.some((item) => item.number == card.number)
+        );
+        console.log(this.tableCards);
+        if (
+          this.tableCards.some(
+            (item) => item.number == this.selectedCard.number
+          ) &&
+          listTapi.length !== 1
+        )
+          return "imgPreventSelected";
+
         this.ws.send(
           JSON.stringify({
             type: "system",
@@ -533,6 +606,7 @@ playsong(song){
       console.warn(
         `${this.$config.apiUrl}/gameroom/` + this.RoomID + "/" + token
       );
+
       this.ws = new WebSocket(
         `${this.$config.apiUrl}/gameroom/` + this.RoomID + "/" + token
       );
@@ -572,13 +646,11 @@ playsong(song){
           this.myHand = receivedData.data;
           console.log(new Map(receivedData.otherPlayer));
           this.playersCard = new Map(receivedData.otherPlayer);
-         
         } else if (receivedData.operation === "getTapi") {
           this.tableCards = receivedData.data;
           this.playerTurn = receivedData.turn;
           if (this.tableCards.length == 0) {
-            this.playsong("/jhonsina.mp3")
-      
+            this.playsong("/jhonsina.mp3");
           }
         } else if (receivedData.operation === "endGame") {
           this.gameoverstat = receivedData.data;
@@ -603,15 +675,24 @@ playsong(song){
           this.eatMove.data = receivedData.data;
           this.eatMove.card = receivedData.card;
           this.eatMove.on = true;
-          if (  this.eatMove.card.number == 7 ||  this.eatMove.data.some((card) => card.number == 7)) { this.playsong("/ghabra.mp3")}
-          else if(this.eatMove.card.number == 3){ this.playsong("/hablih3dt.mp3")}    else if(this.eatMove.card.number == 9){ this.playsong("/raysbata.mp3")} else if(this.eatMove.card.number == 1){ this.playsong("/fakir.mp3")}
-          
-       //
+          if (
+            this.eatMove.card.number == 7 ||
+            this.eatMove.data.some((card) => card.number == 7)
+          ) {
+            this.playsong("/ghabra.mp3");
+          } else if (this.eatMove.card.number == 3) {
+            this.playsong("/hablih3dt.mp3");
+          } else if (this.eatMove.card.number == 9) {
+            this.playsong("/raysbata.mp3");
+          } else if (this.eatMove.card.number == 1) {
+            this.playsong("/fakir.mp3");
+          }
+
+          //
           setTimeout(() => {
             this.eatMove.on = false;
           }, 2000);
         } else if (receivedData.operation === "message") {
-
           this.$notify({
             title: receivedData.mycard,
             customClass: "msg_gif",
@@ -620,10 +701,116 @@ playsong(song){
             message: `<img style=" width: 80%;height: 80%;" class="gif-img" src=${receivedData.data} alt="My GIF">`,
             showClose: true,
           });
-          if(receivedData.sound!='none')this.playsong(receivedData.sound)
+          if (receivedData.sound != "none") this.playsong(receivedData.sound);
+        } else if (receivedData.operation === "audio") {
+          let audioData = receivedData.data; // Get the received audio data
+
+          // Check if it starts with the correct prefix and remove it if necessary
+          let prefix = "data:audio/webm;base64,";
+          let cleanAudioData = audioData.startsWith(prefix)
+            ? audioData.replace(prefix, "")
+            : audioData;
+
+          let audioBlob = this.base64ToBlob(cleanAudioData, "audio/webm");
+
+          // Create a URL and play the audio
+          let audioUrl = URL.createObjectURL(audioBlob);
+          let audio = new Audio(audioUrl);
+          // Initialize the AudioContext
+          let audioContext = new (window.AudioContext ||
+            window.webkitAudioContext)();
+
+          // Resume audio context and play audio
+          if (audioContext.state === "suspended") {
+            audioContext.resume().then(() => {
+              audio.play().catch((error) => {
+                console.error("Playback failed:", error);
+              });
+            });
+          } else {
+            audio.play().catch((error) => {
+              console.error("Playback failed:", error);
+            });
+          }
         }
       };
     },
+    async startStreaming() {
+      if (this.isStreaming) return;
+
+      try {
+        this.audioStream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
+
+        this.mediaRecorder = new MediaRecorder(this.audioStream, {
+          mimeType: "audio/webm",
+        });
+
+        // Ensure the WebSocket is open before starting to stream
+        if (this.ws.readyState !== WebSocket.OPEN) {
+          console.error("WebSocket is not open. Unable to start streaming.");
+          return;
+        }
+
+        this.mediaRecorder.ondataavailable = (event) => {
+          this.mediaRecorder = new MediaRecorder(this.audioStream, {
+            mimeType: "audio/webm",
+          });
+          if (this.ws.readyState === WebSocket.OPEN) {
+            let reader = new FileReader();
+            reader.onloadend = () => {
+              let base64data = reader.result.split(",")[1]; // Get base64 data
+              let message = JSON.stringify({
+                operation: "audio",
+                data: base64data,
+              });
+
+              // Send the combined message
+              this.ws.send(message);
+            };
+            reader.readAsDataURL(event.data);
+          } else {
+            console.warn("WebSocket is not open. Cannot send audio data.");
+          }
+        };
+
+        this.mediaRecorder.onerror = (error) => {
+          console.error("MediaRecorder error:", error);
+        };
+
+        this.mediaRecorder.start(); // Send data every 100ms
+        this.isStreaming = true;
+
+        // Stop the stream when needed (optional)
+        this.mediaRecorder.onstop = () => {
+          console.log("MediaRecorder stopped.");
+          this.isStreaming = false;
+          this.audioStream.getTracks().forEach((track) => track.stop());
+        };
+      } catch (error) {
+        console.error("Error starting audio stream:", error);
+      }
+    },
+    stopStreaming() {
+      if (!this.isStreaming) return;
+
+      this.mediaRecorder.stop();
+      this.audioStream.getTracks().forEach((track) => track.stop());
+      this.isStreaming = false;
+    },
+    base64ToBlob(base64, type = "audio/webm") {
+      const binaryString = atob(base64);
+      const len = binaryString.length;
+      const bytes = new Uint8Array(len);
+
+      for (let i = 0; i < len; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+
+      return new Blob([bytes], { type });
+    },
+
     // Method to send a message
     sendMessage() {
       if (this.ws) {
@@ -746,7 +933,6 @@ input {
 }
 
 .card .imgSelected {
-
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: solid green 5px;
@@ -784,15 +970,15 @@ input {
 }
 @media (max-width: 480px) {
   .background-main {
-  margin: 0 auto;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-auto-rows: auto 4fr auto;
-  align-items: center;
-  font-family: monospace;
-  justify-content: center;
-}
+    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-auto-rows: auto 4fr auto;
+    align-items: center;
+    font-family: monospace;
+    justify-content: center;
+  }
   .myhandstat img {
     width: 69px;
     height: 100px;
@@ -817,13 +1003,13 @@ input {
     margin: 4px;
   }
   .cardTapi .imgSelected {
-  width: 69px !important;
-  height: 100px !important;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: solid green 5px;
-  transform: scaleX(1);
-}
+    width: 69px !important;
+    height: 100px !important;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: solid green 5px;
+    transform: scaleX(1);
+  }
 
   .cardTapi .imgPreventSelected {
     width: 69px;
