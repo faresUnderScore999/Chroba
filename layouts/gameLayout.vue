@@ -36,7 +36,7 @@
         { name: 'robots', content: 'index, follow' },
         { property: 'og:title', content: '♣︎ Chkobaa ♣︎' },
         { property: 'og:description', content: 'Play Chkobaa online for free with friends or against AI. No signup required!' },
-        { property: 'og:url', content: 'https://chkobaa.onrender.com' },
+        { property: 'og:url', content: 'https://chroba-yejj.vercel.app' },
         { property: 'og:image', content: 'https://www.my-voyance.fr/wp-content/uploads/2013/10/chkobba.gif' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image:width', content: '1200' },
