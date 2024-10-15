@@ -3200,7 +3200,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(9).default
 module.exports.__inject__ = function (context) {
-  add("252b73aa", content, true, context)
+  add("7327e32a", content, true, context)
 };
 
 /***/ }),
@@ -49752,9 +49752,9 @@ module.exports = __webpack_require__.p + "fonts/element-icons.732389d.ttf";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_5fcec804_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_5fcec804_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_5fcec804_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_5fcec804_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_5fcec804_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_625d65cd_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_625d65cd_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_625d65cd_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_625d65cd_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_gameLayout_vue_vue_type_style_index_0_id_625d65cd_prod_scopped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -70357,8 +70357,8 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
 // EXTERNAL MODULE: ./node_modules/element-ui/lib/theme-chalk/index.css
 var theme_chalk = __webpack_require__(57);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/gameLayout.vue?vue&type=template&id=5fcec804
-var gameLayoutvue_type_template_id_5fcec804_render = function render() {
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/gameLayout.vue?vue&type=template&id=625d65cd
+var gameLayoutvue_type_template_id_625d65cd_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -70369,9 +70369,9 @@ var gameLayoutvue_type_template_id_5fcec804_render = function render() {
     }
   }, [_vm._ssrNode("<main class=\"background-body\">", "</main>", [_vm._ssrNode("<div></div> "), _c('Nuxt')], 2)]);
 };
-var gameLayoutvue_type_template_id_5fcec804_staticRenderFns = [];
+var gameLayoutvue_type_template_id_625d65cd_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./layouts/gameLayout.vue?vue&type=template&id=5fcec804
+// CONCATENATED MODULE: ./layouts/gameLayout.vue?vue&type=template&id=625d65cd
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/gameLayout.vue?vue&type=script&lang=js
 /* harmony default export */ var gameLayoutvue_type_script_lang_js = ({
@@ -70397,7 +70397,7 @@ var gameLayoutvue_type_template_id_5fcec804_staticRenderFns = [];
         content: 'https://chroba-yejj.vercel.app'
       }, {
         property: 'og:image',
-        content: 'https://www.my-voyance.fr/wp-content/uploads/2013/10/chkobba.gif'
+        content: 'https://www.tunisie-radio.com/sites/default/files/styles/article_large/public/field/image/54690_t6.jpeg?itok=4vnd1sFo'
       }, {
         property: 'og:type',
         content: 'website'
@@ -70428,8 +70428,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var gameLayout_component = Object(componentNormalizer["a" /* default */])(
   layouts_gameLayoutvue_type_script_lang_js,
-  gameLayoutvue_type_template_id_5fcec804_render,
-  gameLayoutvue_type_template_id_5fcec804_staticRenderFns,
+  gameLayoutvue_type_template_id_625d65cd_render,
+  gameLayoutvue_type_template_id_625d65cd_staticRenderFns,
   false,
   gameLayout_injectStyles,
   null,
